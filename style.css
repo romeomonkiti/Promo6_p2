@@ -79,6 +79,12 @@ a:active{
     color: rgba(252, 244, 61, 1);
 }
 
+.menu_toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
 ul {
     list-style: none;
 }
@@ -229,7 +235,7 @@ ul {
 }
 
 .about_us_img:hover {
-    transform: translateY(-10px); /* monte légèrement */
+    transform: translateY(-10px); 
 }
 
 .c_icon {
@@ -548,4 +554,110 @@ ul {
 
 .footer_content_part2_right{
     margin-right: 28px;
-}z
+}
+
+
+
+@media (max-width: 768px) {
+
+    .header_content {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .menu {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    background: #353434;
+    position: absolute;
+    top: 40px;
+    left: 50px;
+    z-index: 100;
+    padding: 20px 25px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .menu.open {
+        display: flex;
+    }
+
+    .menu_toggle {
+        display: block;
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+    .hero_title {
+        width: 100%;
+        font-size: 40px;
+        line-height: 45px;
+    }
+
+    .hero_content_img {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about_us_desc {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .about_us_img_content {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .about_content_part {
+        flex-direction: column;
+        gap: 40px;
+        padding: 20px;
+    }
+
+    .about_content_left_part,
+    .about_content_left_part img {
+        width: 100%;
+        height: auto;
+    }
+
+    .about_content_right_part p {
+        width: 100%;
+    }
+
+    .reviews-wrapper {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .review-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .review-text {
+        width: 100%;
+    }
+
+    .footer_content_part1 {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .footer_content_part1_2,
+    .footer_content_part1_1 {
+        margin-right: 0;
+    }
+
+    .footer_content_part1_3_1 {
+        width: 100%;
+        height: auto;
+    }
+
+    .footer_content_part2 {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}
